@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <meta charset="utf-8">
-<title>Streamgraph</title>
-<style>
-
-</style>
+<title>Vizi</title>
 
 <script>
 
@@ -11,13 +8,13 @@ setInterval(() => { transition(); }, 3000);
 
 </script>
 
-<svg width="1600" height="500"></svg>
+<svg width="1400" height="500"></svg>
 <script src="https://d3js.org/d3.v4.min.js"></script>
 <script>
 
-var n = 20, // number of layers
-    m = 200, // number of samples per layer
-    k = 10; // number of bumps per layer
+var n = 50, // number of layers
+    m = 400, // number of samples per layer
+    k = 20; // number of bumps per layer
 
 var stack = d3.stack().keys(d3.range(n)).offset(d3.stackOffsetWiggle),
     layers0 = stack(d3.transpose(d3.range(n).map(function() { return bumps(m, k); }))),
